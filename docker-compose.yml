@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streams-rtmp-server
+    env_file: 
+      - .env
+    volumes: 
+      - ".:/app"
+    ports:
+      - "0.0.0.0:9000:8000"
+    tty: true
