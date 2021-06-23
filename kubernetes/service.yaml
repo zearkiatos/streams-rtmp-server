@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-06-23T01:25:47Z"
+  labels:
+    app: streams-rtmp-server
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":8000,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl-expose
+    operation: Update
+    time: "2021-06-23T01:25:47Z"
+  name: streams-rtmp-server
+  namespace: default
+  resourceVersion: "15408"
+  selfLink: /api/v1/namespaces/default/services/streams-rtmp-server
+  uid: 171e4706-85ba-4711-874f-226a9428b02c
+spec:
+  clusterIP: 10.107.254.35
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31263
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: streams-rtmp-server
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
