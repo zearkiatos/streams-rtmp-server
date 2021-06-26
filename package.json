@@ -1,0 +1,32 @@
+{
+  "name": "streams-rtmp-server",
+  "version": "1.0.0",
+  "description": "Real time messaging protocol server",
+  "main": "index.js",
+  "scripts": {
+    "deploy:vercel": "vercel --prod",
+    "start": "node index.js",
+    "dev": "nodemon start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zearkiatos/streams-rtmp-server.git"
+  },
+  "author": "Pedro Capriles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zearkiatos/streams-rtmp-server/issues"
+  },
+  "homepage": "https://github.com/zearkiatos/streams-rtmp-server#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "node-media-server": "^2.2.8"
+  },
+  "nodemonConfig": {
+    "ext": "js,html,css,json"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.11.1",
+    "nodemon": "^2.0.7"
+  }
+}
