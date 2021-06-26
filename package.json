@@ -4,6 +4,7 @@
   "description": "Real time messaging protocol server",
   "main": "index.js",
   "scripts": {
+    "deploy:vercel": "vercel --prod",
     "start": "node index.js",
     "dev": "nodemon start"
   },
@@ -21,7 +22,11 @@
     "dotenv": "^10.0.0",
     "node-media-server": "^2.2.8"
   },
+  "nodemonConfig": {
+    "ext": "js,html,css,json"
+  },
   "devDependencies": {
+    "@vercel/node": "^1.11.1",
     "nodemon": "^2.0.7"
   }
 }

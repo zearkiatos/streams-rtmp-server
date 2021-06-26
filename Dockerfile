@@ -1,4 +1,4 @@
-FROM node:15-alpine
+FROM node:15-alpine AS builder
 
 RUN apk update && apk add python make g++
 RUN apk add --update nodejs npm
@@ -9,6 +9,7 @@ COPY . .
 
 RUN npm install
 
-EXPOSE 9000
+EXPOSE 8000
+EXPOSE 1935
 
-CMD npm run dev
+ENTRYPOINT ["sh", "./docker/entrypoint.sh"]
