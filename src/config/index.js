@@ -12,7 +12,7 @@ const config = {
         PING_TIMEOUT: process.env.RTMP_PING_TIMEOUT
     },
     HTTP: {
-        PORT: process.env.HTTP_PORT,
+        PORT: process.env.PORT,
         ALLOW_ORIGIN: process.env.HTTP_ALLOW_ORIGIN
     }
 };

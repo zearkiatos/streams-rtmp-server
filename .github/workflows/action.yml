@@ -28,7 +28,7 @@ jobs:
         echo "RTMP_GOP_CACHE=${RTMP_GOP_CACHE}" >> .env &&
         echo "RTMP_PING=${RTMP_PING}" >> .env &&
         echo "RTMP_PING_TIMEOUT=${RTMP_PING_TIMEOUT}" >> .env &&
-        echo "HTTP_PORT=${HTTP_PORT}" >> .env &&
+        echo "PORT=${PORT}" >> .env &&
         echo "HTTP_ALLOW_ORIGIN=${HTTP_ALLOW_ORIGIN}" >> .env
       env:
         NODE_ENV: ${{ secrets.NODE_ENV }}
@@ -37,5 +37,5 @@ jobs:
         RTMP_GOP_CACHE: ${{ secrets.RTMP_GOP_CACHE }}
         RTMP_PING: ${{ secrets.RTMP_PING }}
         RTMP_PING_TIMEOUT: ${{ secrets.RTMP_PING_TIMEOUT }}
-        HTTP_PORT: ${{ secrets.HTTP_PORT }}
+        PORT: ${{ secrets.PORT }}
         HTTP_ALLOW_ORIGIN: ${{ secrets.HTTP_ALLOW_ORIGIN }}
